@@ -77,4 +77,71 @@
         </mxCell>
 
         <!-- RELACIÓN IDENTIFICADORA (doble rombo) entre Variedad y Especie -->
-        <mxCell id="r_de" value="de" style="shape=rhombus;whiteSpace=wrap;html=1;strokeCol_
+        <mxCell id="r_de" value="de" style="shape=rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="360" y="320" width="80" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES: atributos -> entidad -->
+        <mxCell id="edge_a1" edge="1" source="a_idHuerto" target="e_Huerto" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a2" edge="1" source="a_nombreHuerto" target="e_Huerto" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a3" edge="1" source="a_ubicacion" target="e_Huerto" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_a4" edge="1" source="a_idArbol" target="e_Arbol" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a5" edge="1" source="a_anioPlantacion" target="e_Arbol" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a6" edge="1" source="a_anioMuerte" target="e_Arbol" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a7" edge="1" source="a_edad" target="e_Arbol" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_a8" edge="1" source="a_idEspecie" target="e_Especie" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a9" edge="1" source="a_nombreEspecie" target="e_Especie" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_a10" edge="1" source="a_idVariedad" target="e_Variedad" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_a11" edge="1" source="a_nombreVariedad" target="e_Variedad" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES: entidades <-> relaciones -->
+        <mxCell id="edge_e_Huerto_r_contiene" edge="1" source="e_Huerto" target="r_contiene" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_e_Arbol_r_contiene" edge="1" source="e_Arbol" target="r_contiene" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_e_Arbol_r_pertenece" edge="1" source="e_Arbol" target="r_pertenece" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_e_Variedad_r_pertenece" edge="1" source="e_Variedad" target="r_pertenece" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_e_Especie_r_de" edge="1" source="e_Especie" target="r_de" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_e_Variedad_r_de" edge="1" source="e_Variedad" target="r_de" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
