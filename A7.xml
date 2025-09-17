@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Servicio Militar" id="servicio-militar">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ENTIDADES -->
+        <mxCell id="soldado" value="Soldado" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cuartel" value="Cuartel" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cuerpo" value="Cuerpo" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="compania" value="Compañía" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="servicio" value="Servicio" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS SOLDADO -->
+        <mxCell id="cod_soldado" value="cod_soldado (PK)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="50" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="nombre_s" value="nombre" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="apellidos" value="apellidos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="150" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="graduacion" value="graduación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="200" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS CUARTEL -->
+        <mxCell id="cod_cuartel" value="cod_cuartel (PK)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="50" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="nombre_c" value="nombre" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ubicacion" value="ubicación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="150" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS CUERPO -->
+        <mxCell id="cod_cuerpo" value="cod_cuerpo (PK)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="250" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="denominacion" value="denominación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS COMPAÑIA -->
+        <mxCell id="num_compania" value="num_compañía (PK)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="250" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="actividad" value="actividad_principal" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS SERVICIO -->
+        <mxCell id="cod_servicio" value="cod_servicio (PK)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="250" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="descripcion" value="descripción" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIONES -->
+        <mxCell id="rel_pertenece" value="pertenece" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_asignado" value="asignado" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="150" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_ubica" value="ubica" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_realiza" value="realiza (fecha)" style="shape=rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- CONEXIONES ATRIBUTOS -->
+        <mxCell edge="1" source="cod_soldado" target="soldado" parent="1"/>
+        <mxCell edge="1" source="nombre_s" target="soldado" parent="1"/>
+        <mxCell edge="1" source="apellidos" target="soldado" parent="1"/>
+        <mxCell edge="1" source="graduacion" target="soldado" parent="1"/>
+
+        <mxCell edge="1" source="cod_cuartel" target="cuartel" parent="1"/>
+        <mxCell edge="1" source="nombre_c" target="cuartel" parent="1"/>
+        <mxCell edge="1" source="ubicacion" target="cuartel" parent="1"/>
+
+        <mxCell edge="1" source="cod_cuerpo" target="cuerpo" parent="1"/>
+        <mxCell edge="1" source="denominacion" target="cuerpo" parent="1"/>
+
+        <mxCell edge="1" source="num_compania" target="compania" parent="1"/>
+        <mxCell edge="1" source="actividad" target="compania" parent="1"/>
+
+        <mxCell edge="1" source="cod_servicio" target="servicio" parent="1"/>
+        <mxCell edge="1" source="descripcion" target="servicio" parent="1"/>
+
+        <!-- CONEXIONES RELACIONES -->
+        <mxCell edge="1" source="soldado" target="rel_pertenece" parent="1"/>
+        <mxCell edge="1" source="rel_pertenece" target="cuerpo" parent="1"/>
+
+        <mxCell edge="1" source="soldado" target="rel_asignado" parent="1"/>
+        <mxCell edge="1" source="rel_asignado" target="compania" parent="1"/>
+
+        <mxCell edge="1" source="compania" target="rel_ubica" parent="1"/>
+        <mxCell edge="1" source="rel_ubica" target="cuartel" parent="1"/>
+
+        <mxCell edge="1" source="soldado" target="rel_realiza" parent="1"/>
+        <mxCell edge="1" source="rel_realiza" target="servicio" parent="1"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
