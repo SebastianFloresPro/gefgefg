@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-09-17T00:00:00.000Z" agent="5.0 (ChatGPT)" etag="12345" version="20.5.3" type="device">
+  <diagram id="d1" name="Huerto Frutícola">
+    <mxGraphModel dx="1216" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Entidades -->
+        <mxCell id="e_tierra" value="Huerto" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_arbol" value="Árbol" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_variedad" value="Variedad" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_registro" value="Registro (histórico)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="160" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_comuna" value="Ubicación (Huerto)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Relaciones -->
+        <mxCell id="r_contiene" value="contiene" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_tieneVariedad" value="tiene_variedad" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_registra" value="registra" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="c1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e_tierra" target="r_contiene">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_contiene" target="e_arbol">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c3" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_arbol" target="r_tieneVariedad">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c4" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_tieneVariedad" target="e_variedad">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c5" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_arbol" target="r_registra">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c6" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_registra" target="e_registro">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c7" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_tierra" target="e_comuna">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Notas (cardinalidades/atributos conceptuales) como textos -->
+        <mxCell id="note1" value="(Huerto: id, nombre, ubicación)" style="text;html=1;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="300" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="note2" value="(Árbol: id, especie, fecha_plantación, fecha_muerte)" style="text;html=1;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="260" y="110" width="360" height="30" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="d2" name="Carreteras">
+    <mxGraphModel dx="1216" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Entidades -->
+        <mxCell id="e_carretera" value="Carretera" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_tramo" value="Tramo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_comuna2" value="Comuna" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Relaciones -->
+        <mxCell id="r_compone" value="compone_de" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_pasa" value="pasa_por" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="c21" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_carretera" target="r_compone">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c22" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_compone" target="e_tramo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c23" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_tramo" target="r_pasa">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c24" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_pasa" target="e_comuna2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Relación especial para extremos -->
+        <mxCell id="e_extremo" value="Extremo_de" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="note_ext" value="(atributos: tipo_extremo: físico/confluye; si confluye -> carretera_destino, km, tramo_id_destino, comuna_destino)" style="text;html=1;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="460" height="60" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="d3" name="Servicio Militar">
+    <mxGraphModel dx="1216" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Entidades -->
+        <mxCell id="e_soldado" value="Soldado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_cuartel" value="Cuartel" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_cuerpo" value="Cuerpo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_compania" value="Compañía" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="160" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_servicio" value="Servicio" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Relaciones / asociaciones -->
+        <mxCell id="r_perteneceCuerpo" value="pertenece_a" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_perteneceComp" value="pertenece_a" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_estaEn" value="destinado_en" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_realiza" value="realiza" style="shape=rhombus;whiteSpace=wrap;html=1;perimeter=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="c31" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_soldado" target="r_perteneceCuerpo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c32" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_perteneceCuerpo" target="e_cuerpo"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="c33" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_soldado" target="r_perteneceComp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c34" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_perteneceComp" target="e_compania"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="c35" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_perteneceComp" target="r_estaEn"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c36" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_estaEn" target="e_cuartel"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="c37" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="e_soldado" target="r_realiza"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c38" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r_realiza" target="e_servicio"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Notas de diseño -->
+        <mxCell id="note_mil1" value="Reglas: Soldado -> 1 Cuerpo; Soldado -> 1 Compañía; Compañía puede tener soldados de varios cuerpos; Compañía puede estar en varios cuarteles; Soldado está en 1 cuartel; Servicio realizado por muchos soldados; registro fecha de realización en la relación." style="text;html=1;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="600" height="80" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
