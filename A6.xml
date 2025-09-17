@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Carreteras">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ENTIDAD Carretera -->
+        <mxCell id="carretera" value="Carretera" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="idCarretera" value="idCarretera (PK)" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="nombreCarretera" value="nombre" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCarreteraA_id" edge="1" source="carretera" target="idCarretera" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCarreteraA_nombre" edge="1" source="carretera" target="nombreCarretera" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ENTIDAD Categoría -->
+        <mxCell id="categoria" value="Categoría" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="idCategoria" value="idCategoria (PK)" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="600" y="50" width="140" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="nombreCategoria" value="nombre" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="140" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCategoria_id" edge="1" source="categoria" target="idCategoria" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCategoria_nombre" edge="1" source="categoria" target="nombreCategoria" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIÓN Clasificada_en -->
+        <mxCell id="clasificada" value="clasificada_en" style="rhombus;whiteSpace=wrap;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="325" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCarreteraCategoria1" edge="1" source="carretera" target="clasificada" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relCarreteraCategoria2" edge="1" source="clasificada" target="categoria" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ENTIDAD Tramo -->
+        <mxCell id="tramo" value="Tramo" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="idTramo" value="idTramo (PK)" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="longitud" value="longitud_km" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramo_id" edge="1" source="tramo" target="idTramo" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramo_longitud" edge="1" source="tramo" target="longitud" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIÓN Forma_Parte_De -->
+        <mxCell id="formaParte" value="forma_parte_de" style="rhombus;whiteSpace=wrap;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="200" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramoCarretera1" edge="1" source="tramo" target="formaParte" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramoCarretera2" edge="1" source="formaParte" target="carretera" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ENTIDAD Comuna -->
+        <mxCell id="comuna" value="Comuna" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="500" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="idComuna" value="idComuna (PK)" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="140" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="nombreComuna" value="nombre" style="ellipse;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="650" y="350" width="140" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="relComuna_id" edge="1" source="comuna" target="idComuna" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relComuna_nombre" edge="1" source="comuna" target="nombreComuna" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIÓN Pasa_por -->
+        <mxCell id="pasaPor" value="pasa_por" style="rhombus;whiteSpace=wrap;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramoComuna1" edge="1" source="tramo" target="pasaPor" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="relTramoComuna2" edge="1" source="pasaPor" target="comuna" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
